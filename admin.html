@@ -3,40 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>STREET LIFE · Админ</title>
+<title>Maafuq · Админ</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%2210%22%20fill%3D%22%23131312%22/%3E%3Cpath%20d%3D%22M7%2043V22C7%2012%2014.5%205%2024%205s17%207%2017%2017v21Z%22%20fill%3D%22none%22%20stroke%3D%22%23C8A24A%22%20stroke-width%3D%223%22/%3E%3Cg%20fill%3D%22%23E3C77E%22%3E%3Cpath%20transform%3D%22translate%2817%2022%29%20scale%28.95%29%22%20d%3D%22M0%200%203.2%206.5H1.5L4.8%2013H.9v2.5h-1.8V13h-3.7l3.3-6.5h-1.7Z%22/%3E%3Cpath%20transform%3D%22translate%2826%2017.6%29%20scale%281.2%29%22%20d%3D%22M0%200%203.2%206.5H1.5L4.8%2013H.9v2.5h-1.8V13h-3.7l3.3-6.5h-1.7Z%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Unbounded:wght@700;800;900&family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-primary:#080A07;
-    --bg-card:#0F120D;
-    --bg-card-hover:#181D14;
-    --accent-color:#B8FF2E;
-    --accent-hover:#A5E800;
-    --accent-neon:#D4FF6A;
-    --text-primary:#F0F0F0;
-    --text-secondary:#8A9A7A;
-    --border-color:#1E2418;
+    --bg-primary:#131312;
+    --bg-card:#1B1A18;
+    --bg-card-hover:#26241F;
+    --accent-color:#C8A24A;
+    --accent-hover:#B08A36;
+    --accent-neon:#E3C77E;
+    --text-primary:#EEE8DA;
+    --text-secondary:#A29B8A;
+    --border-color:#302D27;
     --border-radius-card:14px;
     --border-radius-btn:10px;
     --font-heading:'Montserrat',sans-serif;
     --font-body:'Inter',sans-serif;
-    --font-logo:'Unbounded',sans-serif;
+    --font-logo:'Cormorant Garamond',Georgia,serif;
 
     --bg:var(--bg-primary);
     --bg-elev:var(--bg-card);
     --text:var(--text-primary);
     --muted:var(--text-secondary);
-    --muted-dim:#5C6B52;
+    --muted-dim:#6F6A5D;
     --accent:var(--accent-color);
     --accent-soft:var(--accent-neon);
-    --accent-dim:rgba(184,255,46,.12);
+    --accent-dim:rgba(200,162,74,.12);
     --line:var(--border-color);
     --bg-elev-2:var(--bg-card-hover);
-    --line-soft:rgba(148,163,184,.06);
-    --danger:#FF6B6B;
-    --ok:#6BCB77;
+    --line-soft:rgba(200,190,170,.06);
+    --danger:#D9644A;
+    --ok:#E3C77E;
     --ease:cubic-bezier(.22,1,.36,1);
     --ease-sheet:cubic-bezier(.26,1.06,.34,1);
     --ease-spring:cubic-bezier(.34,1.56,.64,1);
@@ -51,15 +52,15 @@
   body::before{
     content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     background:
-      radial-gradient(ellipse 80% 50% at 20% 40%, rgba(184,255,46,.05), transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(184,255,46,.03), transparent 50%);
+      radial-gradient(ellipse 80% 50% at 20% 40%, rgba(200,162,74,.05), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(200,162,74,.03), transparent 50%);
   }
   .orb{
     position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;
     opacity:.35;animation:orbFloat 20s ease-in-out infinite;
   }
-  .orb-1{width:250px;height:250px;background:rgba(184,255,46,.07);top:-80px;right:-60px;animation-delay:0s;}
-  .orb-2{width:200px;height:200px;background:rgba(184,255,46,.05);bottom:20%;left:-40px;animation-delay:-8s;animation-duration:22s;}
+  .orb-1{width:250px;height:250px;background:rgba(200,162,74,.07);top:-80px;right:-60px;animation-delay:0s;}
+  .orb-2{width:200px;height:200px;background:rgba(200,162,74,.05);bottom:20%;left:-40px;animation-delay:-8s;animation-duration:22s;}
   @keyframes orbFloat{
     0%,100%{transform:translate(0,0) scale(1);}
     33%{transform:translate(25px,-25px) scale(1.08);}
@@ -77,12 +78,9 @@
   h1{font-family:var(--font-heading);font-size:22px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;margin:0;}
   .muted{color:var(--muted);font-size:12px;}
   .brand{display:flex;align-items:center;gap:10px;justify-content:center;}
-  .brand-mark{flex:0 0 auto;filter:drop-shadow(0 0 8px rgba(184,255,46,.4));animation:markPulse 3s ease-in-out infinite;}
-  @keyframes markPulse{0%,100%{filter:drop-shadow(0 0 8px rgba(184,255,46,.4));}50%{filter:drop-shadow(0 0 14px rgba(184,255,46,.6));}}
-  .brand-mark .mark-rot{transform-origin:15px 15px;animation:markRotate 12s linear infinite;}
-  @keyframes markRotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  .brand-mark{flex:0 0 auto;}
   .brand-text{display:flex;flex-direction:column;line-height:1;text-align:left;}
-  .brand .logo{font-family:var(--font-logo);font-size:15px;font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:var(--text);}
+  .brand .logo{font-family:var(--font-logo);font-size:24px;font-weight:700;letter-spacing:.015em;line-height:.9;color:var(--text);}
   .brand .logo-sub{margin-top:3px;font-size:8px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
   label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:16px 0 7px;font-weight:500;}
   input[type=text], input[type=number], input[type=password], textarea{
@@ -103,9 +101,9 @@
   .swatch-opt.active{border-color:var(--accent);transform:scale(1.1);}
   .swatch-opt.active::after{border-color:var(--accent-dim);}
   .btn{
-    background:linear-gradient(135deg,var(--accent-soft),var(--accent));color:#0A0D09;border:none;padding:14px 20px;
+    background:linear-gradient(135deg,var(--accent-soft),var(--accent));color:#17140E;border:none;padding:14px 20px;
     font-family:var(--font-body);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
-    border-radius:8px;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(184,255,46,.25);
+    border-radius:8px;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(200,162,74,.25);
     transition:all .2s var(--ease);position:relative;overflow:hidden;
   }
   .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,.2),transparent);transform:translateX(-100%);transition:transform .5s;}
@@ -126,7 +124,7 @@
     transition:all .2s var(--ease);
   }
   .btn-danger:active{transform:scale(.95);}
-  .btn-danger:hover{background:rgba(255,107,107,.1);}
+  .btn-danger:hover{background:rgba(217,100,74,.1);}
   .btn-icon-label{display:inline-flex;align-items:center;gap:6px;}
   .row{display:flex;gap:10px;}
   .row > *{flex:1;}
@@ -140,6 +138,15 @@
   .badge-opt:active{transform:scale(.92);}
   .badge-opt:hover{color:var(--text);border-color:var(--muted-dim);}
   .badge-opt.active{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);}
+  .badge-opt[data-badge="hit"].active{border-color:#C8A24A;color:#E3C77E;background:rgba(200,162,74,.14);}
+  .badge-opt[data-badge="trend"].active{border-color:rgba(200,162,74,.7);color:#E3C77E;background:#2A251A;}
+  .badge-opt[data-badge="sale"].active{border-color:#E27A5F;color:#EE957E;background:rgba(217,100,74,.14);}
+  .badge-opt[data-badge="instock"].active{border-color:#EEE8DA;color:#EEE8DA;background:rgba(238,232,218,.1);}
+  .badge-mini{font-weight:600;letter-spacing:.02em;}
+  .badge-mini-hit{color:#E3C77E;}
+  .badge-mini-trend{color:#C8A24A;}
+  .badge-mini-sale{color:#EE957E;}
+  .badge-mini-instock{color:#EEE8DA;}
   .price-old{color:var(--muted);text-decoration:line-through;margin-right:6px;}
 
   .login-box{max-width:360px;margin:18vh auto 0;text-align:center;position:relative;z-index:1;}
@@ -159,7 +166,7 @@
     background:none;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;
     transition:all .2s var(--ease);font-weight:500;
   }
-  .logout:hover{color:var(--danger);border-color:var(--danger);background:rgba(255,107,107,.08);}
+  .logout:hover{color:var(--danger);border-color:var(--danger);background:rgba(217,100,74,.08);}
 
   .stat-row{display:flex;gap:10px;margin-bottom:20px;}
   .stat-card{
@@ -167,7 +174,7 @@
     padding:14px 16px;transition:all .25s var(--ease);position:relative;overflow:hidden;
   }
   .stat-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-dim),transparent);opacity:0;transition:opacity .3s;}
-  .stat-card:hover{border-color:rgba(184,255,46,.25);transform:translateY(-2px);}
+  .stat-card:hover{border-color:rgba(200,162,74,.25);transform:translateY(-2px);}
   .stat-card:hover::before{opacity:1;}
   .stat-num{font-family:var(--font-body);font-size:26px;font-weight:600;color:var(--text);line-height:1;position:relative;}
   .stat-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px;position:relative;}
@@ -179,7 +186,7 @@
     transition:all .25s var(--ease);position:relative;overflow:hidden;
   }
   .card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-dim),transparent);opacity:0;transition:opacity .3s;}
-  .card:hover{border-color:rgba(184,255,46,.25);transform:translateY(-2px);}
+  .card:hover{border-color:rgba(200,162,74,.25);transform:translateY(-2px);}
   .card:hover::before{opacity:1;}
   @keyframes cardIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
   .thumb{
@@ -195,13 +202,13 @@
 
   .fab{
     position:fixed;right:20px;bottom:24px;width:58px;height:58px;border-radius:50%;
-    background:linear-gradient(135deg,var(--accent-soft),var(--accent));color:#0A0D09;font-size:28px;border:none;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(184,255,46,.4);
+    background:linear-gradient(135deg,var(--accent-soft),var(--accent));color:#17140E;font-size:28px;border:none;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(200,162,74,.4);
     transition:all .25s var(--ease);z-index:45;
   }
   .fab::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);opacity:0;transition:opacity .3s;}
   .fab:active{transform:scale(.9);}
-  .fab:hover{box-shadow:0 12px 40px rgba(184,255,46,.55);transform:translateY(-2px) scale(1.05);}
+  .fab:hover{box-shadow:0 12px 40px rgba(200,162,74,.55);transform:translateY(-2px) scale(1.05);}
   .fab:hover::before{opacity:.2;}
 
   .overlay{
@@ -211,7 +218,7 @@
   }
   .overlay.open{opacity:1;pointer-events:auto;}
   .modal{
-    background:linear-gradient(180deg,rgba(15,18,13,.98),rgba(8,10,7,.99));border-top:1.5px solid var(--line);border-radius:20px 20px 0 0;
+    background:linear-gradient(180deg,rgba(27,26,24,.98),rgba(19,19,18,.99));border-top:1.5px solid var(--line);border-radius:20px 20px 0 0;
     max-width:640px;width:100%;max-height:90vh;overflow-y:auto;padding:20px 22px 32px;
     transform:translateY(24px);transition:transform .38s var(--ease-sheet);
     box-shadow:0 -24px 70px rgba(0,0,0,.55);
@@ -238,11 +245,11 @@
   .photo-tile.cover::after{
     content:"обложка";position:absolute;left:0;right:0;bottom:0;
     font-size:9px;letter-spacing:.06em;text-transform:uppercase;text-align:center;
-    color:var(--accent);background:rgba(8,10,7,.8);padding:4px 0;font-weight:500;
+    color:var(--accent);background:rgba(19,19,18,.8);padding:4px 0;font-weight:500;
   }
   .photo-tile-remove{
     position:absolute;top:5px;right:5px;width:22px;height:22px;border-radius:50%;
-    background:rgba(8,10,7,.8);border:1px solid rgba(255,255,255,.15);color:#fff;
+    background:rgba(19,19,18,.8);border:1px solid rgba(255,255,255,.15);color:#fff;
     font-size:12px;line-height:1;display:flex;align-items:center;justify-content:center;
     cursor:pointer;transition:all .15s;
   }
@@ -250,12 +257,12 @@
   .photo-tile-remove:hover{background:var(--danger);border-color:var(--danger);}
   .photo-tile-move{
     position:absolute;top:5px;width:22px;height:22px;border-radius:50%;
-    background:rgba(8,10,7,.8);border:1px solid rgba(255,255,255,.15);color:#fff;
+    background:rgba(19,19,18,.8);border:1px solid rgba(255,255,255,.15);color:#fff;
     font-size:11px;line-height:1;display:flex;align-items:center;justify-content:center;
     cursor:pointer;transition:all .15s;
   }
   .photo-tile-move:active{transform:scale(.82);}
-  .photo-tile-move:hover{background:var(--accent);color:#0A0D09;border-color:var(--accent);}
+  .photo-tile-move:hover{background:var(--accent);color:#17140E;border-color:var(--accent);}
   .photo-tile-move.left{left:5px;}
   .photo-tile-move.right{left:30px;}
   .photo-tile-move.disabled{opacity:.25;pointer-events:none;}
@@ -278,7 +285,7 @@
     pointer-events:none;max-width:calc(100% - 40px);width:max-content;
   }
   .toast{
-    pointer-events:auto;background:var(--accent);color:#0A0D09;
+    pointer-events:auto;background:var(--accent);color:#17140E;
     padding:11px 20px;border-radius:999px;font-size:12px;max-width:100%;font-weight:600;
     box-shadow:0 10px 30px rgba(0,0,0,.45);
     opacity:0;transform:translateY(16px) scale(.94);
@@ -298,9 +305,9 @@
     transition:all .2s var(--ease);font-weight:500;
   }
   .tab-btn:active{transform:scale(.95);}
-  .tab-btn.active{color:#0A0D09;background:linear-gradient(135deg,var(--accent-soft),var(--accent));box-shadow:0 4px 16px rgba(184,255,46,.3);font-weight:600;}
+  .tab-btn.active{color:#17140E;background:linear-gradient(135deg,var(--accent-soft),var(--accent));box-shadow:0 4px 16px rgba(200,162,74,.3);font-weight:600;}
   .tab-badge{
-    display:inline-block;background:var(--accent);color:#0A0D09;font-size:10px;
+    display:inline-block;background:var(--accent);color:#17140E;font-size:10px;
     border-radius:999px;min-width:16px;height:16px;line-height:16px;text-align:center;
     margin-left:6px;padding:0 4px;font-weight:700;
   }
@@ -311,7 +318,7 @@
     transition:all .25s var(--ease);position:relative;overflow:hidden;
   }
   .order-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-dim),transparent);opacity:0;transition:opacity .3s;}
-  .order-card:hover{border-color:rgba(184,255,46,.25);transform:translateY(-2px);}
+  .order-card:hover{border-color:rgba(200,162,74,.25);transform:translateY(-2px);}
   .order-card:hover::before{opacity:1;}
   .order-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;position:relative;z-index:1;}
   .order-id{font-family:var(--font-heading);font-size:15px;font-weight:700;text-transform:uppercase;}
@@ -321,9 +328,9 @@
     border-radius:999px;border:1.5px solid;white-space:nowrap;font-weight:600;
   }
   .status-new{color:var(--accent);border-color:var(--accent);background:var(--accent-dim);}
-  .status-contacted{color:#8FC0E8;border-color:#8FC0E8;background:rgba(127,178,224,.12);}
-  .status-done{color:var(--ok);border-color:var(--ok);background:rgba(107,203,119,.1);}
-  .status-cancelled{color:var(--danger);border-color:var(--danger);background:rgba(255,107,107,.1);}
+  .status-contacted{color:#D8CFB8;border-color:rgba(216,207,184,.55);background:rgba(238,232,218,.08);}
+  .status-done{color:#1A1408;border-color:rgba(227,199,126,.6);background:linear-gradient(135deg,#C8A24A,#E3C77E);}
+  .status-cancelled{color:#EE957E;border-color:rgba(238,149,126,.7);background:rgba(217,100,74,.14);}
   .order-items{font-size:12px;color:var(--muted);margin:12px 0;line-height:1.7;position:relative;z-index:1;}
   .order-contact{font-size:13px;margin-top:8px;line-height:1.7;position:relative;z-index:1;}
   .order-contact a{color:var(--accent);text-decoration:none;font-weight:500;}
@@ -350,19 +357,19 @@
 
 <div id="loginView" class="login-box">
   <div class="brand">
-    <svg class="brand-mark" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="brandGradLogin" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#7CE000"/><stop offset=".5" stop-color="#D4FF6A"/><stop offset="1" stop-color="#7CE000"/>
-        </linearGradient>
-      </defs>
-      <g class="mark-rot">
-        <path d="M4 12l5 3.5L15 6l6 9.5 5-3.5-2 12H6L4 12Z" stroke="url(#brandGradLogin)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
-        <path d="M8.5 22.5h13" stroke="url(#brandGradLogin)" stroke-width="1.6" stroke-linecap="round"/>
-      </g>
-    </svg>
+    <svg class="brand-mark" width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Maafuq">
+        <defs><path id="pine30A" d="M0 0 3.2 6.5H1.5L4.8 13H.9v2.5h-1.8V13h-3.7l3.3-6.5h-1.7Z"/></defs>
+        <path d="M7 43V22C7 12 14.5 5 24 5s17 7 17 17v21Z" stroke="#C8A24A" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M11.8 39V22.6C11.8 14.8 17 9.8 24 9.8s12.2 5 12.2 12.8V39Z" stroke="#C8A24A" stroke-width="1.3" opacity=".7" stroke-linejoin="round"/>
+        <g fill="#E3C77E">
+          <use href="#pine30A" transform="translate(16.6 21.5) scale(.95)"/>
+          <use href="#pine30A" transform="translate(25.4 17.6) scale(1.2)"/>
+          <use href="#pine30A" transform="translate(32.2 24.6) scale(.75)"/>
+        </g>
+        <path d="M12.4 36.2h23.2" stroke="#C8A24A" stroke-width="1.3" stroke-linecap="round" opacity=".7"/>
+      </svg>
     <div class="brand-text">
-      <div class="logo">Street Life</div>
+      <div class="logo">Maafuq</div>
       <div class="logo-sub">Панель администратора</div>
     </div>
   </div>
@@ -377,16 +384,16 @@
 <div id="app" style="display:none;">
   <div class="topbar">
     <div class="brand">
-      <svg class="brand-mark" width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="brandGradTop" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#7CE000"/><stop offset=".5" stop-color="#D4FF6A"/><stop offset="1" stop-color="#7CE000"/>
-          </linearGradient>
-        </defs>
-        <g class="mark-rot">
-          <path d="M4 12l5 3.5L15 6l6 9.5 5-3.5-2 12H6L4 12Z" stroke="url(#brandGradTop)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
-          <path d="M8.5 22.5h13" stroke="url(#brandGradTop)" stroke-width="1.6" stroke-linecap="round"/>
+      <svg class="brand-mark" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Maafuq">
+        <defs><path id="pine24B" d="M0 0 3.2 6.5H1.5L4.8 13H.9v2.5h-1.8V13h-3.7l3.3-6.5h-1.7Z"/></defs>
+        <path d="M7 43V22C7 12 14.5 5 24 5s17 7 17 17v21Z" stroke="#C8A24A" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M11.8 39V22.6C11.8 14.8 17 9.8 24 9.8s12.2 5 12.2 12.8V39Z" stroke="#C8A24A" stroke-width="1.3" opacity=".7" stroke-linejoin="round"/>
+        <g fill="#E3C77E">
+          <use href="#pine24B" transform="translate(16.6 21.5) scale(.95)"/>
+          <use href="#pine24B" transform="translate(25.4 17.6) scale(1.2)"/>
+          <use href="#pine24B" transform="translate(32.2 24.6) scale(.75)"/>
         </g>
+        <path d="M12.4 36.2h23.2" stroke="#C8A24A" stroke-width="1.3" stroke-linecap="round" opacity=".7"/>
       </svg>
       <div class="brand-text">
         <h1 id="viewTitle">Товары</h1>
@@ -426,12 +433,12 @@
     <div class="swatches" id="swatchPicker"></div>
 
     <label>Название</label>
-    <input type="text" id="fName" placeholder="Худи STREET LIFE">
+    <input type="text" id="fName" placeholder="Худи Maafuq «Тайная вечеря»">
 
     <div class="row">
       <div>
         <label>Категория</label>
-        <input type="text" id="fCategory" placeholder="Кроссовки">
+        <input type="text" id="fCategory" placeholder="Худи">
       </div>
       <div>
         <label>Цена, ₽</label>
@@ -529,7 +536,7 @@ function priceLineHTML(p){
   return fmt(p.price);
 }
 
-let pwd = localStorage.getItem('street_life_admin_pwd') || '';
+let pwd = localStorage.getItem('maafuq_admin_pwd') || '';
 let products = [];
 let orders = [];
 let questions = [];
@@ -584,7 +591,7 @@ async function tryLogin(){
   document.getElementById('loginError').textContent = '';
   try {
     await api('/api/admin/login', { method:'POST' });
-    localStorage.setItem('street_life_admin_pwd', pwd);
+    localStorage.setItem('maafuq_admin_pwd', pwd);
     enterApp();
   } catch(e){
     document.getElementById('loginError').textContent = 'Неверный пароль';
@@ -594,7 +601,7 @@ document.getElementById('loginBtn').onclick = tryLogin;
 document.getElementById('pwInput').addEventListener('keydown', e=>{ if(e.key==='Enter') tryLogin(); });
 
 document.getElementById('logoutBtn').onclick = () => {
-  localStorage.removeItem('street_life_admin_pwd');
+  localStorage.removeItem('maafuq_admin_pwd');
   pwd = '';
   document.getElementById('app').style.display = 'none';
   document.getElementById('addBtn').style.display = 'none';
@@ -662,7 +669,7 @@ function renderList(){
   list.innerHTML = products.map(p => {
     const cover = (p.images && p.images.length) ? p.images[0] : p.image;
     const photoCount = (p.images && p.images.length) ? p.images.length : (p.image ? 1 : 0);
-    const badgeTag = p.badge && BADGE_LABELS[p.badge] ? ` · <span style="color:var(--accent);">${BADGE_LABELS[p.badge]}</span>` : '';
+    const badgeTag = p.badge && BADGE_LABELS[p.badge] ? ` · <span class="badge-mini badge-mini-${p.badge}">${BADGE_LABELS[p.badge]}</span>` : '';
     return `
     <div class="card">
       <div class="thumb" style="${cover ? `background-image:url('${cover}')` : `background:${SWATCHES[p.swatch % SWATCHES.length]}`}"></div>
@@ -724,7 +731,7 @@ function renderOrders(){
     <div class="order-card">
       <div class="order-head">
         <div>
-          <div class="order-id">SL-${o.id}</div>
+          <div class="order-id">MF-${o.id}</div>
           <div class="order-date">${new Date(o.created_at).toLocaleString('ru-RU')}</div>
         </div>
         <span class="status-badge status-${o.status}">${statusLabel(o.status)}</span>
@@ -1182,7 +1189,7 @@ document.getElementById('saveBtn').onclick = async () => {
 if (pwd){
   api('/api/admin/login', { method:'POST' })
     .then(enterApp)
-    .catch(() => { pwd=''; localStorage.removeItem('street_life_admin_pwd'); });
+    .catch(() => { pwd=''; localStorage.removeItem('maafuq_admin_pwd'); });
 }
 
 
